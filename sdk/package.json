@@ -1,0 +1,63 @@
+{
+  "name": "@asyncarijit/rn-pushdeck",
+  "version": "0.2.0",
+  "description": "OTA JavaScript updates for React Native apps — self-hosted CodePush alternative.",
+  "license": "MIT",
+  "author": "asyncarijit",
+  "homepage": "https://github.com/asyncArijit/RN-Pushdeck#readme",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "INSTALL_ANDROID.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "react-native": ">=0.74.0",
+    "react-native-fs": ">=2.20.0",
+    "react-native-restart": ">=0.0.27",
+    "@react-native-async-storage/async-storage": ">=1.21.0",
+    "react-native-device-info": ">=10.0.0",
+    "react-native-zip-archive": ">=6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react-native-zip-archive": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@types/react-native": "^0.72.0",
+    "tsup": "^8.5.1",
+    "typescript": "^5.6.0"
+  },
+  "keywords": [
+    "react-native",
+    "ota",
+    "codepush",
+    "updates"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asyncArijit/RN-Pushdeck.git",
+    "directory": "sdk"
+  },
+  "bugs": {
+    "url": "https://github.com/asyncArijit/RN-Pushdeck/issues"
+  }
+}
